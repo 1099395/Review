@@ -5,7 +5,7 @@ node {
     bat "echo Preparations are done"
   }
   stage ("Build Code") {
-   bat "cd ${workspace}Review && ${mvmHome}/bin/mvn clean package"
+   bat "${mvmHome}/bin/mvn clean package"
    bat "echo code is builded"
   }
   stage ("Build Image") {
