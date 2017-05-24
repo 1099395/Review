@@ -5,7 +5,7 @@ node {
     bat "echo Preparations are done"
   }
   stage ("Build Code") {
-   bat "${mvmHome}/bin/mvn clean package"
+    bat "cd ${workspace}/Review && export JAVA_HOME=/tools/jdk1.8.0_121/ && ${mvnHome}/bin/mvn clean package"
    bat "echo code is builded"
   }
   stage ("Build Image") {
