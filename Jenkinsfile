@@ -6,7 +6,7 @@ node {
     bat "echo Preparations are done"
   }
   stage ("Build Code") {
-    bat "cd C:/Users/1099395/Downloads/Review/Review && export ${javaHome} && ${mvnHome}/bin/mvn clean package"
+    bat "cd C:/Users/1099395/Downloads/Review/Review && PATH+JDK=${javaHome}/bin &&  JAVA_HOME=${javaHome} && ${mvnHome}/bin/mvn clean package"
    bat "echo code is builded"
   }
   stage ("Build Image") {
