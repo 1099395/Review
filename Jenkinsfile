@@ -8,7 +8,7 @@ node {
    bat "cd ${workspace}Review && ${mvmHome}/bin/mvn clean package"
    bat "echo code is builded"
   }
-  stage ('Build Image') {
+  stage ("Build Image") {
     withCredentials([[$class: "UsernamePasswordMultiBinding", usernameVariable: 'DOCKERHUB_USER', passwordVariable: 'DOCKERHUB_PASS', credentialsId: '1099395']]) {
       bat "docker login --username $DOCKERHUB_USER --password $DOCKERHUB_PASS"
     }
