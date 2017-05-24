@@ -1,12 +1,12 @@
 
 node {
   def mvnHome = tool 'maven3'
-  
+  def javaHome = tool 'JDK'
   stage ("Intial Preparation") {
     bat "echo Preparations are done"
   }
   stage ("Build Code") {
-    bat "cd C:/Users/1099395/Downloads/Review/Review && export JAVA_HOME=/tools/jdk1.8.0_121/ && ${mvnHome}/bin/mvn clean package"
+    bat "cd C:/Users/1099395/Downloads/Review/Review && export ${javaHome} && ${mvnHome}/bin/mvn clean package"
    bat "echo code is builded"
   }
   stage ("Build Image") {
