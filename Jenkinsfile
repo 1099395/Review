@@ -3,7 +3,7 @@ node {
   def mvnHome = tool 'maven3'
   def javaHome = "C:/Program Files/Java/jdk1.8.0_121/bin"
   stage ("Intial Preparation") {
-    bat "echo Preparations are done"
+    bat "echo Preparations are done -- ${mvnHome} --${javaHome} "
   }
   stage ("Build Code") {
    
