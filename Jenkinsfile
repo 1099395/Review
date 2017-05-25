@@ -6,7 +6,7 @@ node {
     bat "echo Preparations are done"
   }
   stage ("Build Code") {
-   sh "cd C:/Users/1099395/Downloads/Review/Review && export JAVA_HOME=/tools/jdk1.8.0_121/ && /tools/apache-maven-3.3.9/bin/mvn clean package"
+   sh "cd ${workspace}/Review && export JAVA_HOME=/tools/jdk1.8.0_121/ && /tools/apache-maven-3.3.9/bin/mvn clean package"
     //bat "cd C:/Users/1099395/Downloads/Review/Review &&  && ${mvnHome}/bin/mvn install"
     //echo "JDK: $JAVA_HOME"
    bat "echo code is builded"
