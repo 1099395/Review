@@ -6,7 +6,7 @@ node {
     bat "echo Preparations are done"
   }
   stage ("Build Code") {
-    bat "cd C:/Users/1099395/Downloads/Review/Review && C:/apache-maven-3.5.0-bin/apache-maven-3.5.0/bin/mvn clean package"
+    bat "cd C:/Users/1099395/Downloads/Review/Review && JAVA_HOME=$javaHome $mvnHome/bin/mvn install"
    bat "echo code is builded"
   }
   stage ("Build Image") {
