@@ -7,9 +7,10 @@ node {
   }
   stage ("Build Code") {
    
-    bat "cd C:/Users/1099395/Downloads/Review/Review && ${mvnHome}/bin/mvn clean package"
-    echo "JDK: $JAVA_HOME"
-   bat "echo code is builded"
+    bat "cd C:/Users/1099395/Downloads/Review/Review"
+    bat "${mvnHome}/bin/mvn clean package"
+    bat "echo \"JDK: $JAVA_HOME\""
+    bat "echo code is builded"
   }
   stage ("Build Image") {
     withCredentials([[$class: "UsernamePasswordMultiBinding", usernameVariable: 'DOCKERHUB_USER', passwordVariable: 'DOCKERHUB_PASS', credentialsId: '1099395']]) {
