@@ -7,7 +7,7 @@ node {
   }
   stage ("Build Code") {
    
-    bat "cd C:/Users/1099395/Downloads/Review/Review"
+    bat "cd C:/Users/1099395/Downloads/Review"
     bat "${mvnHome}/bin/mvn clean package"
     bat "echo \"JDK: $JAVA_HOME\""
     bat "echo code is builded"
